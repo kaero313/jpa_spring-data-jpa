@@ -1,4 +1,4 @@
-package jpa.dto;
+package jpa.member.dto;
 
 import lombok.Data;
 
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-@Table(name="member")
+@Table(name= "member")
 public class member {
 
     @Id

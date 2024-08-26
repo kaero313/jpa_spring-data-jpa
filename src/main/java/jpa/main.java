@@ -1,14 +1,14 @@
-package jpa.controller;
+package jpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication
-public class jpa {
+public class main {
 
     public static void main(String args[]){
-        SpringApplication.run(jpa.class, args);
+        SpringApplication.run(main.class, args);
     }
+
 
 }
