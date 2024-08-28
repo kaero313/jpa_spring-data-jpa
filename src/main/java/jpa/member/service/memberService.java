@@ -2,6 +2,7 @@ package jpa.member.service;
 
 import jpa.member.dto.member;
 import jpa.member.repository.memberRepository;
+import org.assertj.core.util.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,11 @@ public class memberService {
     public List<member> findAll() {
         List<member> members = new ArrayList<>();
         memberRepository.findAll().forEach(e -> members.add(e));
+        return members;
+    }
+
+    public List<member> findAllById(List<String> lists) {
+        List<member> members = memberRepository.findAllById(lists);
         return members;
     }
 

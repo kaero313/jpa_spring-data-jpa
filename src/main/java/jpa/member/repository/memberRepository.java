@@ -11,5 +11,8 @@ public interface memberRepository extends JpaRepository<member, String> {
 
     public List<member> findAll();
 
+    public List<member> findAllById(Iterable<String> ids);
+
+
 
 }
