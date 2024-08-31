@@ -1,6 +1,7 @@
 package jpa.member.repository;
 
 import jpa.member.dto.member;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -9,9 +10,14 @@ import java.util.List;
 @Repository
 public interface memberRepository extends JpaRepository<member, String> {
 
-    public List<member> findAll();
+    @Override
+    List<member> findAll(Sort sort);
 
-    public List<member> findAllById(Iterable<String> ids);
+    @Override
+    List<member> findAllById(Iterable<String> strings);
+
+    @Override
+    <S extends member> S save(S entity);
 
 
 

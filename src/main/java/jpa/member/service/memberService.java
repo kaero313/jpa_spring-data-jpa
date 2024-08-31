@@ -4,6 +4,7 @@ import jpa.member.dto.member;
 import jpa.member.repository.memberRepository;
 import org.assertj.core.util.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -15,9 +16,9 @@ public class memberService {
     @Autowired
     private memberRepository memberRepository;
 
-    public List<member> findAll() {
+    public List<member> findAll(Sort sort) {
         List<member> members = new ArrayList<>();
-        memberRepository.findAll().forEach(e -> members.add(e));
+        memberRepository.findAll(sort).forEach(e -> members.add(e));
         return members;
     }
 
@@ -26,4 +27,9 @@ public class memberService {
         return members;
     }
 
+
+    public member save(member member) {
+        memberRepository.save(member);
+        return member;
+    }
 }
