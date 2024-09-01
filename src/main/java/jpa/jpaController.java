@@ -53,7 +53,6 @@ public class jpaController {
         return members;
     }
 
-
     @RequestMapping(value = "member/save/one", method = {RequestMethod.POST})
     public void save_one(@RequestBody String request){
 
@@ -65,6 +64,25 @@ public class jpaController {
         member.setName(jsonobj.getString("name"));
 
         memberService.save(member);
+    }
+
+    @RequestMapping(value = "member/save/all", method = {RequestMethod.POST})
+    public void save_all(@RequestBody String request){
+
+        JSONArray jsonary = new JSONArray(request);
+
+        List<member> lists = new ArrayList<>();
+
+        for(int i=0; i<jsonary.length(); i++){
+            JSONObject jo = jsonary.getJSONObject(i);
+            member member = new member();
+            member.setId(jo.getString("id"));
+            member.setPw(jo.getString("pw"));
+            member.setName(jo.getString("name"));
+            lists.add(member);
+        }
+
+        memberService.saveAll(lists);
     }
 
 

@@ -27,9 +27,11 @@ public class memberService {
         return members;
     }
 
-
-    public member save(member member) {
+    public void save(member member) {
         memberRepository.save(member);
-        return member;
+    }
+
+    public void saveAll(List<member> lists) {
+        memberRepository.saveAll(lists);
     }
 }

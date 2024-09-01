@@ -19,6 +19,6 @@ public interface memberRepository extends JpaRepository<member, String> {
     @Override
     <S extends member> S save(S entity);
 
-
-
+    @Override
+    <S extends member> List<S> saveAll(Iterable<S> entities);
 }
