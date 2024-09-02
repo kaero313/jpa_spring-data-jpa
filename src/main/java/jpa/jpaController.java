@@ -92,7 +92,25 @@ public class jpaController {
 
     }
 
+    @RequestMapping(value = "member/delete", method = {RequestMethod.POST})
+    public void delete(@RequestBody String request, member member){
 
+        JSONObject jsonobj = new JSONObject(request);
+
+        member.setId(jsonobj.getString("id"));
+        member.setPw(jsonobj.getString("pw"));
+        member.setName(jsonobj.getString("name"));
+
+        memberService.delete(member);
+
+    }
+
+    @RequestMapping(value = "member/delete/id", method = {RequestMethod.GET})
+    public void delete_id(HttpServletRequest request){
+
+        memberService.deleteById(request.getParameter("id"));
+
+    }
 
 
 

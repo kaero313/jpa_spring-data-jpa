@@ -39,4 +39,11 @@ public class memberService {
         return memberRepository.count();
     }
 
+    public void delete(member member) {
+        memberRepository.delete(member);
+    }
+
+    public void deleteById(String id) {
+        memberRepository.deleteById(id);
+    }
 }

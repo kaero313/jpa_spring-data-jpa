@@ -26,4 +26,9 @@ public interface memberRepository extends JpaRepository<member, String> {
     @Override
     <S extends member> long count(Example<S> example);
 
+    @Override
+    void delete(member entity);
+
+    @Override
+    void deleteById(String s);
 }
