@@ -1,6 +1,7 @@
 package jpa.member.repository;
 
 import jpa.member.dto.member;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -21,4 +22,8 @@ public interface memberRepository extends JpaRepository<member, String> {
 
     @Override
     <S extends member> List<S> saveAll(Iterable<S> entities);
+
+    @Override
+    <S extends member> long count(Example<S> example);
+
 }

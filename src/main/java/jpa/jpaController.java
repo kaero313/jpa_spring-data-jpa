@@ -85,6 +85,17 @@ public class jpaController {
         memberService.saveAll(lists);
     }
 
+    @RequestMapping(value = "member/count", method = {RequestMethod.POST})
+    public void count(@RequestBody String request){
+
+        System.out.println(memberService.count());
+
+    }
+
+
+
+
+
 
 
 }

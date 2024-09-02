@@ -34,4 +34,9 @@ public class memberService {
     public void saveAll(List<member> lists) {
         memberRepository.saveAll(lists);
     }
+
+    public long count() {
+        return memberRepository.count();
+    }
+
 }
