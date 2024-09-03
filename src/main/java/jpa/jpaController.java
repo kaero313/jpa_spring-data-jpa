@@ -118,7 +118,12 @@ public class jpaController {
                 request.getParameter("pw"), request.getParameter("name")));
     }
 
+    @RequestMapping(value = "member/select/query_param", method = {RequestMethod.GET})
+    public void select_query_param(HttpServletRequest request){
 
+        System.out.println(memberService.query_param(request.getParameter("id"),
+                request.getParameter("pw"), request.getParameter("name")));
+    }
 
 
 

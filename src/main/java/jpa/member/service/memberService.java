@@ -51,5 +51,9 @@ public class memberService {
         return memberRepository.query(id, pw, name);
     }
 
+    public List<member> query_param(String id, String pw, String name) {
+        return memberRepository.query_param(id, pw, name);
+    }
+
 
 }
