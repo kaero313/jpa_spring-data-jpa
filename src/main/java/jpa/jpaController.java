@@ -5,6 +5,7 @@ import jpa.member.service.memberService;
 import org.assertj.core.util.Lists;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
@@ -102,15 +103,22 @@ public class jpaController {
         member.setName(jsonobj.getString("name"));
 
         memberService.delete(member);
-
     }
 
     @RequestMapping(value = "member/delete/id", method = {RequestMethod.GET})
     public void delete_id(HttpServletRequest request){
 
         memberService.deleteById(request.getParameter("id"));
-
     }
+
+    @RequestMapping(value = "member/select/query", method = {RequestMethod.GET})
+    public void select_query(HttpServletRequest request){
+
+        System.out.println(memberService.query(request.getParameter("id"),
+                request.getParameter("pw"), request.getParameter("name")));
+    }
+
+
 
 
 

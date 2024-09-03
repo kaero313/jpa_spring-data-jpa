@@ -46,4 +46,10 @@ public class memberService {
     public void deleteById(String id) {
         memberRepository.deleteById(id);
     }
+
+    public List<member> query(String id, String pw, String name) {
+        return memberRepository.query(id, pw, name);
+    }
+
+
 }
