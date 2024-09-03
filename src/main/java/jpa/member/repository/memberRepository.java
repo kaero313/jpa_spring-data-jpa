@@ -40,4 +40,6 @@ public interface memberRepository extends JpaRepository<member, String> {
     @Query(value = "select * from member where id = :id and pw = :pw and name = :name", nativeQuery = true)
     List<member> query_param(@Param(value = "id") String id, @Param(value = "pw") String pw, @Param(value = "name") String name);
 
+    @Query(value = "select * from member where id = :#{#member.id} and pw = :#{#member.pw} and name = :#{#member.name}", nativeQuery = true)
+    List<member> query_object(@Param(value = "member") member member);
 }
