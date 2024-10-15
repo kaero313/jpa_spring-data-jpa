@@ -10,3 +10,12 @@
 
 ![image](https://github.com/user-attachments/assets/9607619c-fdfd-4be3-aea8-4dd025b5fe19)
 > JPA 표준 명세를 구현하여 사용함(Hibernate 등은 JPA를 미리 구현해놓은 구현체이자 클래스임)
+
+<br/>
+
+<h3>2. JPA를 쓰는 이유</h3>
+
+- 반복적인 CRUD SQL 처리를 쉽게 해준다.
+
+![image](https://github.com/user-attachments/assets/697db7f0-587f-40a1-b067-df200461e356)
+> 기존의 쿼리를 한줄로 간단하게 사용할 수 있음(select 쿼리문)
