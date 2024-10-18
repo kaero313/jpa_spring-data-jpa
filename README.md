@@ -26,3 +26,9 @@
 - JPA의 단점
   - 난이도가 있다. 장점을 더 극대화 하기 위해서 알아야 할게 많음
   - 잘 이해하고 사용하지 않으면 데이터 손실 및 성능 이슈가 있을 수 있음 (persistence context)
+
+<br/>
+
+<h3>3. JPA 동작 원리</h3>
+
+![image](https://github.com/user-attachments/assets/b9acc7e5-a19b-45d5-ab0d-5b730f31a508)
