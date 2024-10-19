@@ -29,6 +29,9 @@
 
 <br/>
 
-<h3>3. JPA 동작 원리</h3>
+<h3>3. JPA 동작 과정</h3>
 
 ![image](https://github.com/user-attachments/assets/b9acc7e5-a19b-45d5-ab0d-5b730f31a508)
+> JPA는 애플리케이션과 JDBC 사이에서 동작함
+
+- JPA를 사용하면, JPA내부에서 JDBC API를 사용하여 SQL을 호출하고 DB와 통신을 한다.(사용자가 직접 JDBC API를 사용하지 않음)
