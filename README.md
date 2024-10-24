@@ -41,3 +41,4 @@
 <h4>3-1. JPA 저장 과정</h4>
 
 ![image](https://github.com/user-attachments/assets/e1e9397c-3be5-458a-900a-e936365444bb)
+> MemberDAO에서 객체를 저장하는 과정까지의 아키텍쳐
