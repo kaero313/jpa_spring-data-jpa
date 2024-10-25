@@ -42,3 +42,7 @@
 
 ![image](https://github.com/user-attachments/assets/e1e9397c-3be5-458a-900a-e936365444bb)
 > MemberDAO에서 객체를 저장하는 과정까지의 아키텍쳐
+
+- MemberDAO 클래스를 통해 persist()를 실행하면, JPA가 Entity 객체를 분석하여 SQL문을 생성한다.
+- JDBC API를 사용하여 DB에 생성된 INSERT SQL을 보내게 된다.
+- 이 과정에서 JPA는 객체와 데이터베이스 테이블의 패러다임 불일치를 해결한다.
