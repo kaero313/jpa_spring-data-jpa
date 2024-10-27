@@ -46,3 +46,7 @@
 - MemberDAO 클래스를 통해 persist()를 실행하면, JPA가 Entity 객체를 분석하여 SQL문을 생성한다.
 - JDBC API를 사용하여 DB에 생성된 INSERT SQL을 보내게 된다.
 - 이 과정에서 JPA는 객체와 데이터베이스 테이블의 패러다임 불일치를 해결한다.
+
+<br/>
+
+<h4>3-2. JPA 조회 과정</h4>
