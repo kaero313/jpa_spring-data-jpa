@@ -50,3 +50,6 @@
 <br/>
 
 <h4>3-2. JPA 조회 과정</h4>
+
+![image](https://github.com/user-attachments/assets/a5a9d809-918a-4e6f-922b-05a7cb54eac7)
+
