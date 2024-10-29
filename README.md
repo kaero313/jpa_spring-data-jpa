@@ -52,4 +52,4 @@
 <h4>3-2. JPA 조회 과정</h4>
 
 ![image](https://github.com/user-attachments/assets/a5a9d809-918a-4e6f-922b-05a7cb54eac7)
-
+> MemberDAO에서 객체 조회 요청을 하고 결과를 리턴 받는 과정까지의 아키텍쳐
