@@ -53,3 +53,5 @@
 
 ![image](https://github.com/user-attachments/assets/a5a9d809-918a-4e6f-922b-05a7cb54eac7)
 > MemberDAO에서 객체 조회 요청을 하고 결과를 리턴 받는 과정까지의 아키텍쳐
+
+- MemberDAO 클래스를 통해 find(id)를 실행하면, JPA는 SELECT SQL을 생성한다.
