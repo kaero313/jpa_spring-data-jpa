@@ -56,3 +56,4 @@
 
 - MemberDAO 클래스를 통해 find(id)를 실행하면, JPA는 SELECT SQL을 생성한다.
 - JDBC API를 사용하여 생성된 SELECT SQL을 보낸다.
+- DB에서 반환된 정보를 ResultSet 매핑을 통해 객체로 변환해 준다.
