@@ -67,6 +67,9 @@
 
 <h4>4-1. join column 사용(외래 키)</h4>
 
+![image](https://github.com/user-attachments/assets/fb8801a8-6db6-421b-905f-cdff526938ab)
+> 테이블 간에 조인 컬럼을 따로 만들어서 관계를 맺는 방법(외래 키 컬럼 사용)
+
 <br/>
 
 <h4>4-1. join table 사용(테이블 사용)</h4>
