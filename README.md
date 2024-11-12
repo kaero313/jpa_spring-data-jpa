@@ -67,12 +67,12 @@
 
 <h4>4-1. join column 사용(외래 키)</h4>
 
-![image](https://github.com/user-attachments/assets/0145b606-9bbf-4035-9a4a-28aae304c316)
+![image](https://github.com/user-attachments/assets/b3d463f3-f971-40a7-93d7-9e335e0706fa)
 > 테이블 간에 조인 컬럼을 따로 만들어서 관계를 맺는 방법(외래 키 컬럼 사용)
 
 <br/>
 
 <h4>4-1. join table 사용(테이블 사용)</h4>
 
-![image](https://github.com/user-attachments/assets/a0359bae-a203-410a-860e-50f58bb72d84)
+![image](https://github.com/user-attachments/assets/c92a596d-8a2e-4cc6-afa4-a6bd521033e8)
 > 조인 테이블이라는 별도의 테이블을 사용해서 연관관계를 관리하는 방법
