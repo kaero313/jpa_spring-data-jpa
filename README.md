@@ -74,3 +74,5 @@
 
 <h4>4-1. join table 사용(테이블 사용)</h4>
 
+![image](https://github.com/user-attachments/assets/a0359bae-a203-410a-860e-50f58bb72d84)
+> 조인 테이블이라는 별도의 테이블을 사용해서 연관관계를 관리하는 방법
