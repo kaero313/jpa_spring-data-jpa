@@ -72,6 +72,9 @@
 
 <br/>
 
+- @JoinColumn
+
+
 <h4>4-2. join table 사용(테이블 사용)</h4>
 
 ![image](https://github.com/user-attachments/assets/c92a596d-8a2e-4cc6-afa4-a6bd521033e8)
@@ -79,8 +82,3 @@
 
 <br/>
 
-<h4>5. 테이블 연관 관계 종류</h4>
-
-<h5>- 1:1</h5>
-<h5>- 1:N or N:1</h5>
-<h5>- N:N</h5>
