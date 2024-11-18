@@ -73,6 +73,7 @@
 <br/>
 
 - @JoinColumn
+    - name 속성
 
 
 <h4>4-2. join table 사용(테이블 사용)</h4>
