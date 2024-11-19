@@ -72,9 +72,12 @@
 
 <br/>
 
-- @JoinColumn
-    - name 속성
+<h5>@JoinColumn</h5>
 
+- JoinColumn이 사용되는 용도는 주로, Entity의 연관관계에서 외래 키를 매핑하기 위해 사용된다.
+- name 속성
+
+<br/>
 
 <h4>4-2. join table 사용(테이블 사용)</h4>
 
