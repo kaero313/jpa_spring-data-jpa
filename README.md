@@ -76,6 +76,7 @@
 
 - JoinColumn이 사용되는 용도는 주로, Entity의 연관관계에서 외래 키를 매핑하기 위해 사용된다.
 - name 속성
+  -  매핑할 외래 키의 이름을 지정하는 속성
 - referencedColumnName 
 
 <br/>
