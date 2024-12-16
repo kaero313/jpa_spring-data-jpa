@@ -81,6 +81,7 @@
   - 조인할 대상 테이블의 컬럼을 의미한다. (Join 절의 ON에 해당하는 대상)
 - @OneToOne : JoinColumn을 사용하는 Entity가 연관관계의 주인, 즉 FK를 가진다.(1:1)
 - @ManyToOne : JoinColumn을 사용하는 Entity가 연관관계의 주인, 즉 FK를 가진다.(N:1)
+- @OneToMany : JoinColumn을 사용하는 Entity의 반대 Entity가 연관관계의 주인, 즉 FK를 가진다.(1:N)
 <br/>
 
 <h4>4-2. join table 사용(테이블 사용)</h4>
