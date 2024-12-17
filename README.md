@@ -82,6 +82,7 @@
 - @OneToOne : JoinColumn을 사용하는 Entity가 연관관계의 주인, 즉 FK를 가진다.(1:1)
 - @ManyToOne : JoinColumn을 사용하는 Entity가 연관관계의 주인, 즉 FK를 가진다.(N:1)
 - @OneToMany : JoinColumn을 사용하는 Entity의 반대 Entity가 연관관계의 주인, 즉 FK를 가진다.(1:N)
+- @ManyToMany : JoinColumn을 사용하는 Join Table(Entity)가 연관관계의 주인, 즉 FK를 가진다.(N:N)
 <br/>
 
 <h4>4-2. join table 사용(테이블 사용)</h4>
