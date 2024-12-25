@@ -80,11 +80,6 @@
   - FK를 누가 가지는가 -> 연관관계의 주인이 누구인가? 외래키 관리자가 누구인가? 
 - referencedColumnName
   - 조인할 대상 테이블의 컬럼을 의미한다. (Join 절의 ON에 해당하는 대상)
--연관관계별 JoinColumn 사용
-  - @OneToOne : JoinColumn을 사용하는 Entity가 연관관계의 주인, 즉 FK를 가진다.(1:1)
-  - @ManyToOne : JoinColumn을 사용하는 Entity가 연관관계의 주인, 즉 FK를 가진다.(N:1)
-  - @OneToMany : JoinColumn을 사용하는 Entity의 반대 Entity가 연관관계의 주인, 즉 FK를 가진다.(1:N)
-  - @ManyToMany : JoinColumn을 사용하는 Join Table(Entity)가 연관관계의 주인, 즉 FK를 가진다.(N:N)
 <br/>
 
 <h4>4-2. join table 사용(테이블 사용)</h4>
@@ -104,3 +99,10 @@
 - inverseJoinColumns 
   - 외래키가 참조하는 대상 테이블의 컬럼명을 지정해 주는 역할
   - default값은 참조하는 테이블의 기본키(pk)의 컬럼명이 됨
+ 
+<h4>4-3. 연관관계별 어노테이션</h4>
+
+- @OneToOne : JoinColumn을 사용하는 Entity가 연관관계의 주인, 즉 FK를 가진다.(1:1)
+- @ManyToOne : JoinColumn을 사용하는 Entity가 연관관계의 주인, 즉 FK를 가진다.(N:1)
+- @OneToMany : JoinColumn을 사용하는 Entity의 반대 Entity가 연관관계의 주인, 즉 FK를 가진다.(1:N)
+- @ManyToMany : JoinColumn을 사용하는 Join Table(Entity)가 연관관계의 주인, 즉 FK를 가진다.(N:N) 
