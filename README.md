@@ -78,6 +78,7 @@
   - 기본적으로 외래키를 저장할 column name을 지정할 수 있다.
   - referencedColumnName 값을 이용해 외래 키로 참조할 대상 테이블의 컬럼을 설정할 수 있다.
   - insertable, updatable 등의 옵션을 사용할 수 있다.
+    - ex) @JoinColumn(insertable = false, updatable = false)
 - name 속성
   - 매핑할 외래 키의 이름을 지정하는 속성
   - FK를 누가 가지는가 -> 연관관계의 주인이 누구인가? 외래키 관리자가 누구인가? 
