@@ -79,7 +79,8 @@
   - referencedColumnName 값을 이용해 외래 키로 참조할 대상 테이블의 컬럼을 설정할 수 있다.
   - insertable, updatable 등의 옵션을 사용할 수 있다.
     - ex) @JoinColumn(insertable = false, updatable = false)
-    - insertable: 엔티티 저장 시 이 필드도 같이 저장한다. false 로 설정하면 데이터베이스에 저장하지 않는다. 읽기 전용일 때 사용한다. 
+    - insertable: 엔티티 저장 시 이 필드도 같이 저장한다. false 로 설정하면 데이터베이스에 저장하지 않는다. 읽기 전용일 때 사용한다.
+    - updatable: 엔티티 수정 시 이 필드도 같이 저장한다. false 로 설정하면 데이터베이스에 수정하지 않는다. 읽기 전용일 때 사용한다. 
 - name 속성
   - 매핑할 외래 키의 이름을 지정하는 속성
   - FK를 누가 가지는가 -> 연관관계의 주인이 누구인가? 외래키 관리자가 누구인가? 
