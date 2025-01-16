@@ -114,7 +114,10 @@
  
 <h4>4-3. 연관관계별 어노테이션</h4>
 
-- @OneToOne : JoinColumn을 사용하는 Entity가 연관관계의 주인, 즉 FK를 가진다.(1:1)
-- @ManyToOne : JoinColumn을 사용하는 Entity가 연관관계의 주인, 즉 FK를 가진다.(N:1)
-- @OneToMany : JoinColumn을 사용하는 Entity의 반대 Entity가 연관관계의 주인, 즉 FK를 가진다.(1:N)
-- @ManyToMany : JoinColumn을 사용하는 Join Table(Entity)가 연관관계의 주인, 즉 FK를 가진다.(N:N) 
+- @OneToOne: JoinColumn을 사용하는 Entity가 연관관계의 주인, 즉 FK를 가진다.(1:1)
+- @ManyToOne: JoinColumn을 사용하는 Entity가 연관관계의 주인, 즉 FK를 가진다.(N:1)
+- @OneToMany: JoinColumn을 사용하는 Entity의 반대 Entity가 연관관계의 주인, 즉 FK를 가진다.(1:N)
+- @ManyToMany: JoinColumn을 사용하는 Join Table(Entity)가 연관관계의 주인, 즉 FK를 가진다.(N:N)
+
+어노테이션의 옵션
+- mappedBy: 연관 관계의 주인을 지정하는 옵션
