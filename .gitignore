@@ -2,6 +2,3 @@ application.properties
 target/
 .gradle/
 out/
-.smarttomcat
-.gitignore
-build
