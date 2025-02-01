@@ -2,10 +2,7 @@ package jpa.member.dto;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -21,5 +18,9 @@ public class member {
 
     @Column(name= "name")
     private String name;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="name")
+    private school school;
 
 }
