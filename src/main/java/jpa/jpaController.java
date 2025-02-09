@@ -135,5 +135,11 @@ public class jpaController {
         System.out.println(memberService.query_object(member));
     }
 
+    @RequestMapping(value = "joincolumn/n_1", method = {RequestMethod.GET})
+    public void joincolumn_n_1(HttpServletRequest request, member member){
+
+
+    }
+
 
 }
