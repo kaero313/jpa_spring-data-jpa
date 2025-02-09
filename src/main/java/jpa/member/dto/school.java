@@ -21,6 +21,7 @@ public class school {
     @Column(name= "grade")
     private String grade;
 
+    //양방향 매핑을 위해 추가
     @OneToMany(mappedBy = "member")
     private List<member> members = new ArrayList<>();
 
