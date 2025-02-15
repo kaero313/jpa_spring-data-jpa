@@ -1,6 +1,6 @@
 package jpa.member.repository;
 
-import jpa.member.dto.member;
+import jpa.member.dto.Member;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,35 +11,35 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface memberRepository extends JpaRepository<member, String> {
+public interface memberRepository extends JpaRepository<Member, String> {
 
     @Override
-    List<member> findAll(Sort sort);
+    List<Member> findAll(Sort sort);
 
     @Override
-    List<member> findAllById(Iterable<String> strings);
+    List<Member> findAllById(Iterable<String> strings);
 
     @Override
-    <S extends member> S save(S entity);
+    <S extends Member> S save(S entity);
 
     @Override
-    <S extends member> List<S> saveAll(Iterable<S> entities);
+    <S extends Member> List<S> saveAll(Iterable<S> entities);
 
     @Override
-    <S extends member> long count(Example<S> example);
+    <S extends Member> long count(Example<S> example);
 
     @Override
-    void delete(member entity);
+    void delete(Member entity);
 
     @Override
     void deleteById(String s);
 
     @Query(value = "select * from member where id = ?1 and pw = ?2 and name = ?3", nativeQuery = true)
-    List<member> query(String id, String pw, String name);
+    List<Member> query(String id, String pw, String name);
 
     @Query(value = "select * from member where id = :id and pw = :pw and name = :name", nativeQuery = true)
-    List<member> query_param(@Param(value = "id") String id, @Param(value = "pw") String pw, @Param(value = "name") String name);
+    List<Member> query_param(@Param(value = "id") String id, @Param(value = "pw") String pw, @Param(value = "name") String name);
 
     @Query(value = "select * from member where id = :#{#member.id} and pw = :#{#member.pw} and name = :#{#member.name}", nativeQuery = true)
-    List<member> query_object(@Param(value = "member") member member);
+    List<Member> query_object(@Param(value = "member") Member member);
 }

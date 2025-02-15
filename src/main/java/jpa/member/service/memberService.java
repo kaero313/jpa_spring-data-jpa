@@ -1,8 +1,7 @@
 package jpa.member.service;
 
-import jpa.member.dto.member;
+import jpa.member.dto.Member;
 import jpa.member.repository.memberRepository;
-import org.assertj.core.util.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -16,22 +15,22 @@ public class memberService {
     @Autowired
     private memberRepository memberRepository;
 
-    public List<member> findAll(Sort sort) {
-        List<member> members = new ArrayList<>();
-        memberRepository.findAll(sort).forEach(e -> members.add(e));
-        return members;
+    public List<Member> findAll(Sort sort) {
+        List<Member> Members = new ArrayList<>();
+        memberRepository.findAll(sort).forEach(e -> Members.add(e));
+        return Members;
     }
 
-    public List<member> findAllById(List<String> lists) {
-        List<member> members = memberRepository.findAllById(lists);
-        return members;
+    public List<Member> findAllById(List<String> lists) {
+        List<Member> Members = memberRepository.findAllById(lists);
+        return Members;
     }
 
-    public void save(member member) {
+    public void save(Member member) {
         memberRepository.save(member);
     }
 
-    public void saveAll(List<member> lists) {
+    public void saveAll(List<Member> lists) {
         memberRepository.saveAll(lists);
     }
 
@@ -39,7 +38,7 @@ public class memberService {
         return memberRepository.count();
     }
 
-    public void delete(member member) {
+    public void delete(Member member) {
         memberRepository.delete(member);
     }
 
@@ -47,15 +46,15 @@ public class memberService {
         memberRepository.deleteById(id);
     }
 
-    public List<member> query(String id, String pw, String name) {
+    public List<Member> query(String id, String pw, String name) {
         return memberRepository.query(id, pw, name);
     }
 
-    public List<member> query_param(String id, String pw, String name) {
+    public List<Member> query_param(String id, String pw, String name) {
         return memberRepository.query_param(id, pw, name);
     }
 
-    public List<member> query_object(member member) {
+    public List<Member> query_object(Member member) {
         return memberRepository.query_object(member);
     }
 }

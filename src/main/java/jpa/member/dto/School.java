@@ -8,8 +8,8 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name= "school")
-public class school {
+@Table(name= "School")
+public class School {
 
     @Id
     @Column(name= "name", nullable = false)
@@ -22,7 +22,7 @@ public class school {
     private String grade;
 
     //양방향 매핑을 위해 추가
-    @OneToMany(mappedBy = "member")
-    private List<member> members = new ArrayList<>();
+    @OneToMany(mappedBy = "school")
+    private List<Member> members = new ArrayList<>();
 
 }

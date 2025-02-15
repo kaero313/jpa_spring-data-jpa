@@ -1,6 +1,7 @@
 package jpa;
 
-import jpa.member.dto.member;
+/*
+import jpa.member.dto.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -13,7 +14,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.sql.DataSource;
-/*
+
 
 @Component
 public class HibernateTest implements ApplicationRunner {
