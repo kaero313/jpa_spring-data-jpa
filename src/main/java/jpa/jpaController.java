@@ -1,11 +1,10 @@
 package jpa;
 
-import jpa.member.dto.member;
+import jpa.member.dto.Member;
+import jpa.member.dto.School;
 import jpa.member.service.memberService;
-import org.assertj.core.util.Lists;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/jpa")
@@ -25,17 +25,17 @@ public class jpaController {
     private memberService memberService;
 
     @RequestMapping(value = "member/select/all", method = {RequestMethod.POST})
-    public List<member> select_all(HttpServletRequest request){
+    public List<Member> select_all(HttpServletRequest request){
 
-        List<member> members = memberService.findAll(Sort.by(Sort.Direction.ASC, "name"));
+        List<Member> Members = memberService.findAll(Sort.by(Sort.Direction.ASC, "name"));
 
-        System.out.println(members);
+        System.out.println(Members);
 
-        return members;
+        return Members;
     }
 
     @RequestMapping(value = "member/select/where", method = {RequestMethod.POST})
-    public List<member> select_where(@RequestBody String request){
+    public List<Member> select_where(@RequestBody String request){
 
         JSONArray jsonary = new JSONArray(request);
 
@@ -47,11 +47,11 @@ public class jpaController {
             ids.add(jo.getString("id"));
         }
 
-        List<member> members = memberService.findAllById(ids);
+        List<Member> Members = memberService.findAllById(ids);
 
-        System.out.println(members);
+        System.out.println(Members);
 
-        return members;
+        return Members;
     }
 
     @RequestMapping(value = "member/save/one", method = {RequestMethod.POST})
@@ -59,7 +59,7 @@ public class jpaController {
 
         JSONObject jsonobj = new JSONObject(request);
 
-        member member = new member();
+        Member member = new Member();
         member.setId(jsonobj.getString("id"));
         member.setPw(jsonobj.getString("pw"));
         member.setName(jsonobj.getString("name"));
@@ -72,11 +72,11 @@ public class jpaController {
 
         JSONArray jsonary = new JSONArray(request);
 
-        List<member> lists = new ArrayList<>();
+        List<Member> lists = new ArrayList<>();
 
         for(int i=0; i<jsonary.length(); i++){
             JSONObject jo = jsonary.getJSONObject(i);
-            member member = new member();
+            Member member = new Member();
             member.setId(jo.getString("id"));
             member.setPw(jo.getString("pw"));
             member.setName(jo.getString("name"));
@@ -94,7 +94,7 @@ public class jpaController {
     }
 
     @RequestMapping(value = "member/delete", method = {RequestMethod.POST})
-    public void delete(@RequestBody String request, member member){
+    public void delete(@RequestBody String request, Member member){
 
         JSONObject jsonobj = new JSONObject(request);
 
@@ -126,7 +126,7 @@ public class jpaController {
     }
 
     @RequestMapping(value = "member/select/query_object", method = {RequestMethod.GET})
-    public void select_query_object(HttpServletRequest request, member member){
+    public void select_query_object(HttpServletRequest request, Member member){
 
         member.setId(request.getParameter("id"));
         member.setPw(request.getParameter("pw"));
@@ -135,9 +135,38 @@ public class jpaController {
         System.out.println(memberService.query_object(member));
     }
 
-    @RequestMapping(value = "joincolumn/n_1", method = {RequestMethod.GET})
-    public void joincolumn_n_1(HttpServletRequest request, member member){
+    @RequestMapping(value = "joincolumn/n_1/save", method = {RequestMethod.POST})
+    public void joincolumn_n_1_Save(HttpServletRequest request){
 
+        School school = new School();
+        school.setName("TestSchoolName");
+
+        Member member = new Member();
+        member.setId("TestMemberId");
+        member.setPw("TestMemberPw");
+        member.setSchool(school);
+        //member.getSchool().getMembers().add(member); //School에도 Member에 대한 정보 추가
+
+        memberService.save(member);
+
+    }
+
+    @RequestMapping(value = "joincolumn/n_1/select", method = {RequestMethod.GET})
+    public void joincolumn_n_1_select(HttpServletRequest request){
+
+        School school = new School();
+        school.setName("TestSchoolName");
+
+        Member member = new Member();
+        member.setSchool(school);
+
+
+
+  /*      List<Member> memberList = school.getMembers();
+        for(Member member: memberList){
+            System.out.println(member.getName());
+        }
+*/
 
     }
 
