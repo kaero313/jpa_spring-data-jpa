@@ -145,7 +145,6 @@ public class jpaController {
         member.setId("TestMemberId");
         member.setPw("TestMemberPw");
         member.setSchool(school);
-        //member.getSchool().getMembers().add(member); //School에도 Member에 대한 정보 추가
 
         memberService.save(member);
 
