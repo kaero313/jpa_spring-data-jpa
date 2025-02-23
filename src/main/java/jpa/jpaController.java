@@ -161,12 +161,6 @@ public class jpaController {
 
 
 
-  /*      List<Member> memberList = school.getMembers();
-        for(Member member: memberList){
-            System.out.println(member.getName());
-        }
-*/
-
     }
 
 
