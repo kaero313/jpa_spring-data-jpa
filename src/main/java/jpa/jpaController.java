@@ -160,6 +160,16 @@ public class jpaController {
         member.setSchool(school);
 
 
+        member.setId("TestMemberId");
+        member.setPw("TestMemberPw");
+        member.setSchool(school);
+
+        memberService.save(member);
+
+        System.out.println(member);
+
+
+        // 조회 결과가 n+1이 나오는 경우 테스트
 
     }
 
