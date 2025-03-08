@@ -159,15 +159,19 @@ public class jpaController {
         Member member = new Member();
         member.setSchool(school);
 
+        JSONArray jsonary = new JSONArray(request);
 
-        member.setId("TestMemberId");
-        member.setPw("TestMemberPw");
-        member.setSchool(school);
+        List<Member> lists = new ArrayList<>();
 
-        memberService.save(member);
+        for(int i=0; i<jsonary.length(); i++){
+            JSONObject jo = jsonary.getJSONObject(i);
+            member.setId(jo.getString("id"));
+            member.setPw(jo.getString("pw"));
+            member.setName(jo.getString("name"));
+            lists.add(member);
+        }
 
-        System.out.println(member);
-
+        memberService.saveAll(lists);
 
         // 조회 결과가 n+1이 나오는 경우 테스트
 
