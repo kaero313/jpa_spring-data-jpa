@@ -168,6 +168,19 @@ public class jpaController {
 
         System.out.println(member);
 
+        JSONArray jsonary = new JSONArray(request);
+
+        List<String> ids = new ArrayList<>();
+
+        for(int i=0; i<jsonary.length(); i++){
+            JSONObject jo = jsonary.getJSONObject(i);
+            System.out.println(jo.getString("id"));
+            ids.add(jo.getString("id"));
+        }
+
+        List<Member> Members = memberService.findAllById(ids);
+
+        System.out.println(Members);
 
         // 조회 결과가 n+1이 나오는 경우 테스트
 
