@@ -182,6 +182,22 @@ public class jpaController {
 
         System.out.println(Members);
 
+
+        JSONArray jsonary1 = new JSONArray(request);
+
+        List<Member> lists = new ArrayList<>();
+
+        for(int i=0; i<jsonary1.length(); i++){
+            JSONObject jo = jsonary1.getJSONObject(i);
+            Member member1 = new Member();
+            member1.setId(jo.getString("id"));
+            member1.setPw(jo.getString("pw"));
+            member1.setName(jo.getString("name"));
+            lists.add(member1);
+        }
+
+        memberService.saveAll(lists);
+
         // 조회 결과가 n+1이 나오는 경우 테스트
 
     }
