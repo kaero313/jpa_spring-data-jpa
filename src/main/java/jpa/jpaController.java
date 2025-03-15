@@ -198,6 +198,16 @@ public class jpaController {
 
         memberService.saveAll(lists);
 
+
+        System.out.println(memberService.query_param(request.getParameter("id"),
+                request.getParameter("pw"), request.getParameter("name")));
+
+        memberService.deleteById(request.getParameter("id"));
+
+        member.setName(request.getParameter("name"));
+
+        System.out.println(memberService.query_object(member));
+
         // 조회 결과가 n+1이 나오는 경우 테스트
 
     }
