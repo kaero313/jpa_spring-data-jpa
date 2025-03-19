@@ -208,6 +208,28 @@ public class jpaController {
 
         System.out.println(memberService.query_object(member));
 
+        JSONArray jsonary3 = new JSONArray(request);
+
+        List<String> ids3 = new ArrayList<>();
+
+        for(int i=0; i<jsonary.length(); i++){
+            JSONObject jo = jsonary.getJSONObject(i);
+            System.out.println(jo.getString("id"));
+            ids.add(jo.getString("id"));
+        }
+
+        List<Member> Members3 = memberService.findAllById(ids);
+
+        System.out.println(Members);
+
+
+        JSONArray jsonary4 = new JSONArray(request);
+        member.setId(request.getParameter("id"));
+        member.setPw(request.getParameter("pw"));
+        member.setName(request.getParameter("name"));
+
+        System.out.println(memberService.query_object(member));
+
         // 조회 결과가 n+1이 나오는 경우 테스트
 
     }
