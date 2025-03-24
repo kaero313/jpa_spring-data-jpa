@@ -170,17 +170,8 @@ public class jpaController {
 
         JSONArray jsonary = new JSONArray(request);
 
-        List<String> ids = new ArrayList<>();
 
-        for(int i=0; i<jsonary.length(); i++){
-            JSONObject jo = jsonary.getJSONObject(i);
-            System.out.println(jo.getString("id"));
-            ids.add(jo.getString("id"));
-        }
 
-        List<Member> Members = memberService.findAllById(ids);
-
-        System.out.println(Members);
 
 
         JSONArray jsonary1 = new JSONArray(request);
@@ -211,7 +202,7 @@ public class jpaController {
         JSONArray jsonary3 = new JSONArray(request);
 
         List<String> ids3 = new ArrayList<>();
-
+/*
         for(int i=0; i<jsonary.length(); i++){
             JSONObject jo = jsonary.getJSONObject(i);
             System.out.println(jo.getString("id"));
@@ -221,7 +212,7 @@ public class jpaController {
         List<Member> Members3 = memberService.findAllById(ids);
 
         System.out.println(Members);
-
+*/
 
         JSONArray jsonary4 = new JSONArray(request);
         member.setId(request.getParameter("id"));
