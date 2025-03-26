@@ -174,46 +174,6 @@ public class jpaController {
 
 
 
-        JSONArray jsonary1 = new JSONArray(request);
-
-        List<Member> lists = new ArrayList<>();
-
-        for(int i=0; i<jsonary1.length(); i++){
-            JSONObject jo = jsonary1.getJSONObject(i);
-            Member member1 = new Member();
-            member1.setId(jo.getString("id"));
-            member1.setPw(jo.getString("pw"));
-            member1.setName(jo.getString("name"));
-            lists.add(member1);
-        }
-
-        memberService.saveAll(lists);
-
-
-        System.out.println(memberService.query_param(request.getParameter("id"),
-                request.getParameter("pw"), request.getParameter("name")));
-
-        memberService.deleteById(request.getParameter("id"));
-
-        member.setName(request.getParameter("name"));
-
-        System.out.println(memberService.query_object(member));
-
-        JSONArray jsonary3 = new JSONArray(request);
-
-        List<String> ids3 = new ArrayList<>();
-/*
-        for(int i=0; i<jsonary.length(); i++){
-            JSONObject jo = jsonary.getJSONObject(i);
-            System.out.println(jo.getString("id"));
-            ids.add(jo.getString("id"));
-        }
-
-        List<Member> Members3 = memberService.findAllById(ids);
-
-        System.out.println(Members);
-*/
-
         JSONArray jsonary4 = new JSONArray(request);
         member.setId(request.getParameter("id"));
         member.setPw(request.getParameter("pw"));
