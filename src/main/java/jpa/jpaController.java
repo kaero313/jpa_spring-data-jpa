@@ -164,6 +164,22 @@ public class jpaController {
         member.setPw("TestMemberPw");
         member.setSchool(school);
 
+
+        JSONArray ary = new JSONArray(request);
+
+        List<Member> lists = new ArrayList<>();
+
+        for(int i=0; i<ary.length(); i++){
+            JSONObject jo = ary.getJSONObject(i);
+            Member mem = new Member();
+            member.setId(jo.getString("id"));
+            member.setPw(jo.getString("pw"));
+            member.setName(jo.getString("name"));
+            lists.add(member);
+        }
+
+        memberService.saveAll(lists);
+
         memberService.save(member);
 
         System.out.println(member);
