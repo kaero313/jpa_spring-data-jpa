@@ -184,6 +184,16 @@ public class jpaController {
 
         System.out.println(member);
 
+        JSONArray jsonary2 = new JSONArray(request);
+
+
+
+        memberService.saveAll(lists);
+
+        memberService.save(member);
+
+        System.out.println(member);
+
         JSONArray jsonary = new JSONArray(request);
 
 
@@ -191,6 +201,13 @@ public class jpaController {
 
 
         JSONArray jsonary4 = new JSONArray(request);
+        member.setId(request.getParameter("id"));
+        member.setPw(request.getParameter("pw"));
+        member.setName(request.getParameter("name"));
+
+
+
+        JSONArray jsonary6 = new JSONArray(request);
         member.setId(request.getParameter("id"));
         member.setPw(request.getParameter("pw"));
         member.setName(request.getParameter("name"));
