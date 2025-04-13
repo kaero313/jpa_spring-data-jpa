@@ -206,6 +206,22 @@ public class jpaController {
         member.setName(request.getParameter("name"));
 
 
+        JSONArray ary2 = new JSONArray(request);
+
+        List<Member> lists2 = new ArrayList<>();
+
+        for(int i=0; i<ary.length(); i++){
+            JSONObject jo = ary.getJSONObject(i);
+            Member mem = new Member();
+            member.setId(jo.getString("id"));
+            member.setPw(jo.getString("pw"));
+            member.setName(jo.getString("name"));
+            lists.add(member);
+        }
+
+        memberService.saveAll(lists);
+
+
 
         JSONArray jsonary6 = new JSONArray(request);
         member.setId(request.getParameter("id"));
