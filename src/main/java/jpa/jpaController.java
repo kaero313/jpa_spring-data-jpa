@@ -180,25 +180,6 @@ public class jpaController {
 
         memberService.saveAll(lists);
 
-        memberService.save(member);
-
-        System.out.println(member);
-
-        JSONArray jsonary2 = new JSONArray(request);
-
-
-
-        memberService.saveAll(lists);
-
-        memberService.save(member);
-
-        System.out.println(member);
-
-        JSONArray jsonary = new JSONArray(request);
-
-
-
-
 
         JSONArray jsonary4 = new JSONArray(request);
         member.setId(request.getParameter("id"));
