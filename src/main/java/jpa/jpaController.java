@@ -166,7 +166,6 @@ public class jpaController {
 
 
         JSONArray ary = new JSONArray(request);
-
         List<Member> lists = new ArrayList<>();
 
         for(int i=0; i<ary.length(); i++){
@@ -181,16 +180,6 @@ public class jpaController {
         memberService.saveAll(lists);
 
 
-        JSONArray jsonary4 = new JSONArray(request);
-        member.setId(request.getParameter("id"));
-        member.setPw(request.getParameter("pw"));
-        member.setName(request.getParameter("name"));
-
-
-        JSONArray ary2 = new JSONArray(request);
-
-        List<Member> lists2 = new ArrayList<>();
-
         for(int i=0; i<ary.length(); i++){
             JSONObject jo = ary.getJSONObject(i);
             Member mem = new Member();
@@ -204,19 +193,15 @@ public class jpaController {
 
 
 
-        JSONArray jsonary6 = new JSONArray(request);
+
+
+
         member.setId(request.getParameter("id"));
         member.setPw(request.getParameter("pw"));
         member.setName(request.getParameter("name"));
 
         System.out.println(memberService.query_object(member));
 
-        member.setName(request.getParameter("name"));
-
-
-        JSONArray ary2 = new JSONArray(request);
-
-        List<Member> lists2 = new ArrayList<>();
 
         for(int i=0; i<ary.length(); i++){
             JSONObject jo = ary.getJSONObject(i);
@@ -228,14 +213,6 @@ public class jpaController {
         }
 
         memberService.saveAll(lists);
-
-
-
-        member.setId(request.getParameter("id"));
-        member.setPw(request.getParameter("pw"));
-        member.setName(request.getParameter("name"));
-
-        System.out.println(memberService.query_object(member));
 
         // 조회 결과가 n+1이 나오는 경우 테스트
 
